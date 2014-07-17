@@ -149,6 +149,7 @@ class Mustache_Context
             }
         }
 
-        return '';
+        $backtrace = debug_backtrace(!DEBUG_BACKTRACE_PROVIDE_OBJECT);
+        throw new Mustache_Exception_InvalidArgumentException("Could not find {$backtrace[1]['args'][0]} - This is not a valid variable to use.");
     }
 }

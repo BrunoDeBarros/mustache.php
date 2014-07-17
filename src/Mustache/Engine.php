@@ -597,7 +597,6 @@ class Mustache_Engine
      */
     public function loadPartial($name)
     {
-        try {
             if (isset($this->partialsLoader)) {
                 $loader = $this->partialsLoader;
             } elseif (isset($this->loader) && !$this->loader instanceof Mustache_Loader_StringLoader) {
@@ -607,14 +606,6 @@ class Mustache_Engine
             }
 
             return $this->loadSource($loader->load($name));
-        } catch (Mustache_Exception_UnknownTemplateException $e) {
-            // If the named partial cannot be found, log then return null.
-            $this->log(
-                Mustache_Logger::WARNING,
-                'Partial not found: "{name}"',
-                array('name' => $e->getTemplateName())
-            );
-        }
     }
 
     /**
