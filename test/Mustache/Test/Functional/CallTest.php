@@ -15,10 +15,9 @@
  */
 class Mustache_Test_Functional_CallTest extends PHPUnit_Framework_TestCase
 {
-
     public function testCallEatsContext()
     {
-        $m = new Mustache_Engine;
+        $m = new Mustache_Engine();
         $tpl = $m->loadTemplate('{{# foo }}{{ label }}: {{ name }}{{/ foo }}');
 
         $foo = new Mustache_Test_Functional_ClassWithCall();

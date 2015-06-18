@@ -12,7 +12,7 @@
 
 /**
  * A shell script to create a single-file class cache of the entire Mustache
- * library:
+ * library.
  *
  *     $ bin/build_bootstrap.php
  *
@@ -72,7 +72,6 @@ SymfonyClassCollectionLoader::load(array(
  * the unnecessary bits removed.
  *
  * @license http://www.opensource.org/licenses/MIT
- *
  * @author Fabien Potencier <fabien@symfony.com>
  */
 class SymfonyClassCollectionLoader
@@ -95,10 +94,10 @@ EOS;
     /**
      * Loads a list of classes and caches them in one big file.
      *
-     * @param array   $classes    An array of classes to load
-     * @param string  $cacheDir   A cache directory
-     * @param string  $name       The cache name prefix
-     * @param string  $extension  File extension of the resulting file
+     * @param array  $classes   An array of classes to load
+     * @param string $cacheDir  A cache directory
+     * @param string $name      The cache name prefix
+     * @param string $extension File extension of the resulting file
      *
      * @throws InvalidArgumentException When class can't be loaded
      */
