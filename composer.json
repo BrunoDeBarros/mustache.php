@@ -5,7 +5,7 @@
     "homepage": "https://github.com/BrunoDeBarros/mustache.php",
     "type": "library",
     "license": "MIT",
-    "authors": [
+    "authors": [ 
         {
             "name": "Justin Hileman",
             "email": "justin@justinhileman.info",
